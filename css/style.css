@@ -147,7 +147,7 @@ nav > a:hover {
     }
 }
 #ofme {
-    border: 5px solid dodgerblue;
+    border: 3px solid #545b62;
     border-radius: 20px;
     width: 100%;
     height: auto;
@@ -159,13 +159,46 @@ nav > a:hover {
     border-radius: 20px;
 }
 #ofme:hover {
-    transform: scale(1.6);
+    transform: scale(1.1);
 }
 @media screen and (max-width: 600px) {
     #ofme {
         display: none;
     }
 } 
+.popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.popup-image span {
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #545b62;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .popup-image img {
+        width: 95%;
+    }
+}
+
 /*----- Ref -----------*/
 #links {
     color: black;
@@ -326,6 +359,7 @@ footer {
     background-color: #545b62;
     text-align: center;
     padding: 20px;
+    margin: 10px;
 }
 footer > a {
     color: #fff;
